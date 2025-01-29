@@ -372,7 +372,7 @@ def build_barchart(data, input_barchart):
         cols = list(bar_data.columns)
         bar_data.columns = [col.replace('_y','') for col in cols]
         # bar_title = "{} (grouped by {})".format(bar_data.columns[0], title_group)
-        bar_title = "<b>{}</b>".format(bar_data.columns[0], title_group)
+        bar_title = '<b>{}</b>'.format(bar_data.columns[0], title_group)
         bar_chart = make_bar(bar_data, 0, 1, layout_direction = 'v', marker_color=eco_color, title = bar_title, ascending=False)
         return  bar_chart
     except:
